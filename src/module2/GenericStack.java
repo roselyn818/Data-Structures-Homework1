@@ -5,10 +5,9 @@ import java.util.Iterator;
 public class GenericStack<E> implements Iterable<E>{
     private Node top;
 
-    //Constructor
-    public GenericStack(E item){
-        Node newNode = new Node(item);
-        top = newNode;
+    //LIFO (last in, first out)
+    public GenericStack(){
+        top = null; //changed so that stack it is empty by default
     }
 
     public Iterator<E> iterator() {
@@ -29,6 +28,8 @@ public class GenericStack<E> implements Iterable<E>{
     }
 
     public E peek(){
+        if (top == null)
+            return null; //added in case stack is empty
         return top.value;
     }
 

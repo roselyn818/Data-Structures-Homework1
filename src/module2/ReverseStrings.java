@@ -13,10 +13,10 @@ public class ReverseStrings {
     private static String reverseString(String myString) {
         String myReversedString = "";
 
-        //puts the first character of the string first to it'll be at the bottom of the stack
-        GenericStack<Character> stack = new GenericStack<>(myString.charAt(0));
+       //creates a character stack instance
+        GenericStack<Character> stack = new GenericStack<>();
 
-        for(int i = 1; i < myString.length(); i++ ) { //loops through from the second character to the last & adds to stack
+        for(int i = 0; i < myString.length(); i++ ) { //loops through from the first character to the last & adds to stack
             stack.push(myString.charAt(i));
         }
 
